@@ -6,10 +6,63 @@ An unofficial MCP server for using [Cloud Automator](https://cloudautomator.com/
 
 ### Tools
 
-1. `get-job`
-  - Get a job with a specific job ID
+1. `list-jobs`
+  - List all jobs with pagination
+  - Inputs:
+    - `pageNumber` (number); Page number for pagination (default: 1)
+    - `pageSize` (number); Number of jobs to return (default: 10)
+2. `get-job`
+  - Get a job with a specific ID
   - Inputs:
     - `jobId` (number); Job ID
+3. `get-log`
+  - Get a job log with a specific ID
+  - Inputs:
+    - `logId` (number); Log ID
+4. `get-resource-operation-results`
+  - Get resource operation results which belongs to the job log with a specific ID
+  - Inputs:
+    - `logId` (number); Log ID
+5. `list-job-workflows`
+  - List all job workflows with pagination
+  - Inputs:
+    - `pageNumber` (number); Page number for pagination (default: 1)
+    - `pageSize` (number); Number of jobs to return (default: 10)
+6. `get-job-workflow`
+  - Get a job workflow with a specific ID
+  - Inputs:
+    - `jobWorkflowId` (number); Job ID
+7. `list-post-processes`
+  - List all post processes with pagination
+  - Inputs:
+    - `pageNumber` (number); Page number for pagination (default: 1)
+    - `pageSize` (number); Number of jobs to return (default: 10)
+8. `get-post-process`
+  - Get a post process with a specific ID
+  - Inputs:
+    - `postProcessId` (number); Post Process ID
+9. `list-group-aws-accounts`
+  - List all AWS accounts which belongs to the group with a specific ID, with pagination
+  - Inputs:
+    - `groupId` (number); Group ID
+    - `pageNumber` (number); Page number for pagination (default: 1)
+    - `pageSize` (number); Number of jobs to return (default: 10)
+10. `get-group-aws-account`
+  - Get an AWS account which belongs to the group with a specific ID
+  - Inputs:
+    - `groupId` (number); Group ID
+    - `awsAccountId` (number); AWS account ID
+11. `list-group-google-cloud-accounts`
+  - List all Google Cloud accounts which belongs to the group with a specific ID, with pagination
+  - Inputs:
+    - `groupId` (number); Group ID
+    - `pageNumber` (number); Page number for pagination (default: 1)
+    - `pageSize` (number); Number of jobs to return (default: 10)
+12. `get-group-google-cloud-account`
+  - Get an Google Cloud account which belongs to the group with a specific ID
+  - Inputs:
+    - `groupId` (number); Group ID
+    - `googleCloudAccountId` (number); Google Cloud account ID
 
 ## Prerequisites
 
