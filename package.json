@@ -1,0 +1,28 @@
+{
+  "name": "mcp-server-cloudautomator",
+  "version": "0.0.1",
+  "description": "An unofficial MCP server for using Cloud Automator REST API.",
+  "author": "Junya Ogura",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "mcp-server-cloudautomator": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod 755 dist/index.js",
+    "inspect": "npx @modelcontextprotocol/inspector node ./dist/index.js",
+    "watch": "tsc --watch"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "ky": "^1.8.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.16",
+    "typescript": "^5.8.2"
+  }
+}
