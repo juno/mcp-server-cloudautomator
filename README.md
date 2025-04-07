@@ -103,6 +103,29 @@ $ npm run build
 }
 ```
 
+### Usage with Visual Studio Code
+
+Add the following configuration to your `.vscode/mcp.json` file. For more information, please refer to the [Use MCP servers in VS Code](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_add-an-mcp-server).
+
+```json
+{
+  "mcp": {
+    "servers": {
+      "cloudautomator": {
+        "type": "stdio",
+        "command": "node",
+        "args": [
+          "/path/to/mcp-server-cloudautomator/dist/index.js"
+        ],
+        "env": {
+          "CLOUDAUTOMATOR_API_KEY": "<YOUR_API_KEY>"
+        }
+      }
+    }
+  }
+}
+```
+
 ## Environment Variables
 
 - `CLOUDAUTOMATOR_API_KEY`: Your Cloud Automator API key (required)
